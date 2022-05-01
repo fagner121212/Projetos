@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicando Números</title>
+</head>
+<body>
+    <h1>Trabalhando com números</h1>
+
+    <button onclick="ativar()">Clique para Calcular</button>
+
+    <div id="output">O resultado da multiplicação ira aparecer aqui!</div>
+
+    <script>
+        alert("Seja bem vindo ao meu site!");
+
+        function ativar() {
+            var numero1 = prompt('Digite o primeiro número!');
+            numero1 = parseFloat(numero1);
+
+            var numero2 = prompt("Digite o segundo número!");
+            numero2 = parseFloat(numero2);
+
+            var output = document.getElementById('output');
+
+            output.innerHTML = "A multiplicação de " + numero1 + " e " + numero2 + " è igual a " + (numero1 * numero2)
+        }
+    </script>
+</body>
+</html>

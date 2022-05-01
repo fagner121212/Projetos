@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+</head>
+<body>
+    <H1>Somando dois números</H1>
+
+    <button onclick="ativar()">Somando dois números</button>
+
+    <div id="output">O resultado da soma!</div>
+
+    <script>
+        function ativar() {
+            var numero = prompt("Digite um número");
+            numero = parseFloat(numero);
+
+            var numero1 = prompt("Digite outro número");
+            numero1 = parseFloat(numero1);
+
+            var output = document.getElementById('output');
+
+            output.innerHTML = "O resultado da soma é " + (numero + numero1)
+        }
+    </script>
+
+</body>
+</html>

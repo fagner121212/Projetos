@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de dois números</title>
+</head>
+
+<body>
+    <h1>Média do aluno v1.0</h1>
+
+    <button onclick="ativar()">Calcular Média</button>
+
+    <div id="output"></div>
+
+    <script>
+        function ativar() {
+            var name = prompt("Qual é seu nome ?");
+
+            var nota1 = prompt("Qual foi o resultado da sua primeira nota ?");
+            nota1 = parseFloat(nota1);
+
+            var nota2 = prompt("Qual foi o resultado da segunda nota ?");
+            nota2 = parseFloat(nota2);
+
+            var output = document.getElementById('output');
+
+            output.innerHTML = "Olá " + name + "<br>" +
+            "Sua primeira nota foi de " + nota1 + "<br>" +
+            "Sua segunda nota foi de " + nota2 + "<br>" + 
+            "O resultado da sua média foi de " + ((nota1 + nota2) / 2)
+            
+
+
+        }
+    </script>
+</body>
+
+</html>
