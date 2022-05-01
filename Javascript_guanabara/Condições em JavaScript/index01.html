@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="if (1).png" type="image/x-icon">
+    <title>Média</title>
+</head>
+<body>
+    <main>
+        <h1>Média do aluno</h1>
+
+        <button onclick="ativar()">Calcular Mèdia</button>
+
+        <section id="res">
+            <p>O resultado ira aparecer aqui</p>
+        </section>
+    </main>
+
+<script>
+    const ativar = () =>{
+        console.log("Funcionou");
+
+        // vamos pegar a nota da primeira nota
+        var nota1 = prompt("por favor digite sua primeira nota");
+        nota1 = parseFloat(nota1);
+
+        // Agora vamos pegar a nota da segunda prova
+        var nota2 = prompt("agora digite a nota da segunda prova por favor");
+        nota2 = parseFloat(nota2);
+
+        console.log(nota1, nota2);
+
+        // vamos pegar os valores das duas somar e depois dividir por dois
+        var media = (nota1 + nota2) / 2;
+
+        console.log(media);
+        // vamos acessar a nosssa section
+        var section = document.getElementById('res');
+        console.log(section);
+        section.innerHTML = 'Alterando o texto';
+        if(media <=5){
+            section.innerHTML = `Legal você passou sua média foi de ${media}`;
+        }else{
+            section.innerHTML = `Poxa seu resultado não foi o esperado estude mais, sua média foi de ${media}`
+        }
+    };
+</script>
+</body>
+</html>
