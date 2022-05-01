@@ -14,13 +14,18 @@
         <button onclick="ativar()">Calcular Mèdia</button>
 
         <section id="res">
-            <p>O resultado ira aparecer aqui</p>
+            <p id="nome">Seu nome sera exebido aqui</p>
+            <p id="resultado">O resultado ira aparecer aqui</p>
         </section>
     </main>
 
 <script>
     const ativar = () =>{
         console.log("Funcionou");
+        
+        // vamos pergunta o nome do aluno
+        var nome = prompt("Olá qual é o seu nome ?");
+        console.log(nome);
 
         // vamos pegar a nota da primeira nota
         var nota1 = prompt("por favor digite sua primeira nota");
@@ -37,13 +42,23 @@
 
         console.log(media);
         // vamos acessar a nosssa section
-        var section = document.getElementById('res');
+
+        var section = document.getElementById('resultado');
         console.log(section);
-        section.innerHTML = 'Alterando o texto';
-        if(media <=5){
-            section.innerHTML = `Legal você passou sua média foi de ${media}`;
-        }else{
-            section.innerHTML = `Poxa seu resultado não foi o esperado estude mais, sua média foi de ${media}`
+        
+        var campoNome = document.getElementById('nome');
+        console.log(campoNome);
+
+        if(media <= 5)
+        {
+            campoNome.innerHTML = nome; 
+            section.innerHTML = "Infeslimente você não alcaçou o resultado esperado sua média foi de " + media;
+            console.log("Você reprovou");
+        }else
+        {   
+            campoNome.innerHTML = nome;
+            section.innerHTML = "Legal você alcançou o resultado esperado, sua média foi de " + media;
+            console.log("você passou");
         }
     };
 </script>
